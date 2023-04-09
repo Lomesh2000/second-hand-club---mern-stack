@@ -16,8 +16,9 @@ const Header = () => {
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
         <Container>
+          <img src="logo.png" height="1000px" width="1000px" className="logo" />
           <LinkContainer to='/'>
-            <Navbar.Brand>SecondHandSell</Navbar.Brand>
+            <Navbar.Brand>SecondHandShop</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
 
@@ -40,7 +41,9 @@ const Header = () => {
               ) : (
                 <LinkContainer to='/login'>
                   <Nav.Link>
-                    <i className='fas fa-user'></i> Sign In
+                    {/* <i className='fas fa-user'></i> */}
+                     <img src="https://cdn-icons-png.flaticon.com/512/2170/2170153.png" className='sign-in' />
+                     Sign In
                   </Nav.Link>
                 </LinkContainer>
               )}
@@ -60,6 +63,7 @@ const Header = () => {
               <LinkContainer to='/about'>
                 <Nav.Link>
                   {/* <i className='far fa-address-card'></i>  */}
+                  <img src="https://cdn-icons-png.flaticon.com/512/189/189664.png" className='about-icon'/>
                   About Us
                 </Nav.Link>
               </LinkContainer>

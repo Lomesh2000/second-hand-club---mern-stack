@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 const AboutUsScreen = () => {
   return (
@@ -27,23 +27,23 @@ const AboutUsScreen = () => {
           <h1>Developer</h1>
           <p>
             Designed and developed by{' '}
-            <a href='https://upendradhamala.com.np' target='_blank'>
-              Upendra Dhamala
+            <a href='emailto:lnawandhar@gmail.com' target='_blank'>
+               ECC Project Group 4
             </a>{' '}
           </p>
           <h3>Who am I?</h3>
           <p>
-            I am Upendra Dhamala. I am a native resident of Achham, Nepal. I am
-            currently studying Computer Engineering(final year) at IOE, WRC
-            Pokhara. There might be some bugs in this website as I am not any
+             
+           We are currently studying Electronics and  Computer Engineering(final year) at MBM, jodhpur
+            Rajasthan. There might be some bugs in this website as I am not any
             professional and currently a web developer in making.
           </p>
           <h3>Contact Details</h3>
-          <i className='fas fa-phone'></i> 9864421289
+          <i className='fas fa-phone'></i> 8824402627
           <br />
           <i className='fas fa-envelope-square'></i>{' '}
-          <a target='_blank' href={`mailto:dhamalaupendra@gmail.com`}>
-            dhamalaupendra@gmail.com
+          <a target='_blank' href={`lnawandhar@gmail.com`}>
+          lnawandhar@gmail.com
           </a>
           <br />
         </Col>

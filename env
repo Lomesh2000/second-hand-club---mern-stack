@@ -1,0 +1,9 @@
+NODE_ENV=development
+PORT=5000
+MONGO_URI=mongodb+srv://tanmaymathur:tanmay4597@cluster0.wo71jco.mongodb.net/?retryWrites=true&w=majority
+JWT_SECRET=hello123world
+CLOUD_NAME=draietojo
+API_KEY=976728877949638
+API_SECRET=Em09xfNmIexI1RtE3pI8W2g1nP0
+SEND_GRID_API=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
+EMAIL_URL=http://localhost:3000/

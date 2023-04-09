@@ -310,3 +310,19 @@ font-size: 11px;
 
 
 }
+
+.logo{
+  height: 100px;
+  width: 100px;
+  transform: translateX(-25px);
+}
+
+.sign-in, .about-icon{
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+}
+
+.card-image{
+  border-radius: 8px;
+}
