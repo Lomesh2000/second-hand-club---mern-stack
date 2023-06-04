@@ -28,7 +28,7 @@ const AboutUsScreen = () => {
           <p>
             Designed and developed by{' '}
             <a href='emailto:lnawandhar@gmail.com' target='_blank'>
-               ECC Project Group 4
+               ECC Project Group 6
             </a>{' '}
           </p>
           <h3>Who am I?</h3>
