@@ -2,12 +2,9 @@ import asyncHandler from 'express-async-handler'
 import User from '../models/userModel.js'
 import dotenv from 'dotenv'
 import jwt from 'jsonwebtoken'
-// const sgMail = require('@sendgrid/mail')
-import sgMail from '@sendgrid/mail'
 import generateToken from '../utils/generateToken.js'
-import nodemailer from 'nodemailer'
+
 dotenv.config()
-sgMail.setApiKey(process.env.SEND_GRID_API)
 
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body
@@ -84,58 +81,14 @@ const verificationLink = asyncHandler(async (req, res) => {
     throw new Error('Enter 10 digit mobile number')
   }
 
-  if (!phone_no.startsWith('9')) {
-    res.status(400)
-    throw new Error('Mobile Number must start with 9')
-  }
   const tokengenerate = jwt.sign(
     { name, email, password, contact, address },
     `${process.env.TOKEN_SECRET}`,   //process.env.JWT_SECRET 
     { expiresIn: '10m' }
   )
-  //send email to regitering user
-  // sgMail.setApiKey(process.env.SEND_GRID_API)
 
-  // var transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: process.env.USER1,
-  //     pass: process.env.PASSWORD,
-  //   },
-  // })
-  // console.log('USER IS', process.env.USER1)
-  // console.log(process.env.PASSWORD)
-  const mailOptions = {
-    from: process.env.USER1,
-    to: email,
-    subject: 'Verify your account',
-
-    html: `<p>Please click on the link below to activate your account</p>
-    <a href="${process.env.EMAIL_URL}/verify/${tokengenerate}">${process.env.EMAIL_URL}/verify/${tokengenerate}</a>`,
-  }
-  // var mailOptions = {
-  //   from: 'KinBechSaman.com',
-  //   to: email,
-  //   subject: 'Verify your account',
-
-  //   html: `<p>Please click on the link below to activate your account</p>
-  //   <a href="${process.env.EMAIL_URL}/verify/${tokengenerate}">${process.env.EMAIL_URL}/verify/${tokengenerate}</a>`,
-  // }
-
-  sgMail.send(mailOptions, function (error, info) {
-    if (error) {
-      res.status(400)
-      console.log('error occurred')
-      throw new Error(error)
-    } else {
-      console.log('Email sent: ' + info.response)
-      res.status(201).json({
-        response:
-          'A verification link has been sent to your Email. Verify it at first.',
-      })
-    }
-  })
 })
+
 const registerUser = asyncHandler(async (req, res) => {
   const { token } = req.body
   if (token) {
@@ -174,34 +127,6 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(404)
     throw new Error('No token found')
   }
-})
-
-const emailSend = asyncHandler(async (req, res) => {
-  const { receiver, text, name, address, productName, email, phone_no } =
-    req.body
-  console.log('user is', email)
-
-  var mailOptions = {
-    from: process.env.USER1,
-    to: receiver,
-    subject: 'You have a buyer',
-
-    html: `<div style="background:#31686e;text-align:center;color:white">One of the user wants to buy your ${productName}. </div><br/>
-    <p>His/Her name is ${name} and is a resident of ${address}.His/Her
-    email is: ${email} and registered contact no is: ${phone_no}.</p>
-
-    He/She says:  ${text}`,
-  }
-
-  sgMail.send(mailOptions, function (error, info) {
-    if (error) {
-      res.status(400)
-      throw new Error(error)
-    } else {
-      console.log('Email sent: ' + info.response)
-      res.status(201).json({ response: 'Email Successfully Sent' })
-    }
-  })
 })
 
 //get all users by admin only
@@ -276,7 +201,6 @@ export {
   authUser,
   getUserProfile,
   registerUser,
-  emailSend,
   getUsers,
   deleteUser,
   updateUserProfile,

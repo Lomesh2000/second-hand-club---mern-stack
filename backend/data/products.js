@@ -1,161 +1,105 @@
 const products = [
   {
-    name: 'Rich Dad Poor Dad',
+    name: 'Cooler',
     images: [
-      { image1: '/images/book.jpeg' },
-      { image1: '/images/book1.jpg' },
+      { image1: '/images/cool1.jpeg' },
+      { image1: '/images/cool2.jpeg' },
       { image1: '/images/book2.jpeg' },
     ],
     description:
-      'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
+      'A short and concise product portable and easy to install and use in a very good condition used only for 3 months',
 
-    category: 'Book',
+    category: 'Electronics',
     Cost: {
-      price: 350,
+      price: 3500,
       negotiable: true,
     },
     expiresOn: 2077 - 9 - 19,
 
     shippingAddress: {
-      address: 'Bikasnagar',
-      city: 'nepalgunj',
-      shippingCharge: 100,
+      address: 'MBM Hostel no 3',
+      city: 'jodhpur',
+      shippingCharge: 0,
     },
     seller: {
-      sellername: 'Moti Dhamala',
-      selleraddress: 'Achham, Nepal',
-      selleremail: 'dhamalamoti@gmail.com',
-      phoneNo: { mobile: '9868383125', isVerified: true },
+      sellername: 'aditya',
+      selleraddress: 'rohit pg near mbm engineering college',
+      selleremail: 'aditya@gmail.com',
+      phoneNo: { mobile: '9829028999', isVerified: true },
     },
   },
 
   {
     name: 'Fridge ',
     images: [
-      { image1: '/images/fridge.jpg' },
-      { image1: '/images/fridge1.jpg' },
-      { image1: '/images/fridge2.jpg' },
+      { image1: '/images/fri.jpeg' },
+      { image1: '/images/fridge1.jpeg' },
+      { image1: '/images/fridge2.jpeg' },
     ],
 
     description:
-      'Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life',
+      'A small portable fridge can be used to store neccessary dairy and day to day product good condition 2nd hand product used for almost 1.5 years',
 
     category: 'Electronics',
     Cost: {
-      price: 3500,
+      price: 4700,
     },
     expiresOn: 2077 - 9 - 19,
     shippingAddress: {
-      address: 'Bikasnagar',
-      city: 'nepalgunj',
-      shippingCharge: 100,
+      address: 'RK PG ratanada',
+      city: 'jodhpur',
+      shippingCharge: 170,
     },
 
     seller: {
-      sellername: 'Moti Dhamala',
-      selleraddress: 'Achham, Nepal',
-      selleremail: 'dhamalamoti1@gmail.com',
+      sellername: 'rohit',
+      selleraddress: 'jodhpur, rajasthan',
+      selleremail: 'rohan@gmail.com',
       phoneNo: { mobile: '9868383125' },
     },
   },
   {
-    name: 'Nokia Mobile',
+    name: 'laptop desk',
     images: [
-      { image1: '/images/mobile.jpg' },
-      { image1: '/images/mobile1.jpg' },
-      { image1: '/images/mobile2.jpg' },
+      { image1: '/images/desk1.jpeg' },
+      { image1: '/images/desk2.jpg' },
+      { image1: '/images/desk3.jpg' },
     ],
 
     description:
-      'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
+      'Foldable laptop desk table portable and consumes less space in good condition',
 
-    category: 'Electronics',
+    category: 'Products',
     Cost: {
-      price: 1350,
+      price: 200,
     },
-    expiresOn: 2077 - 9 - 19,
     shippingAddress: {
-      address: 'Bikasnagar',
-      city: 'nepalgunj',
+      address: 'CHB',
+      city: 'jodhpur',
       shippingCharge: 100,
     },
     seller: {
-      sellername: 'Moti Dhamala',
-      selleraddress: 'Achham, Nepal',
-      selleremail: 'dhamalamoti@gmail.com',
-      phoneNo: { mobile: '9868383125' },
-    },
-  },
-  {
-    name: 'Daraz',
-    images: [
-      { image1: '/images/cupboard.jpeg' },
-      { image1: '/images/cupboard1.jpg' },
-      { image1: '/images/cupboard2.jpg' },
-    ],
-
-    description:
-      'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
-
-    category: 'Electronics',
-    Cost: {
-      price: 2500,
-    },
-    shippingAddress: {
-      address: 'Bikasnagar',
-      city: 'nepalgunj',
-      shippingCharge: 100,
-    },
-    seller: {
-      sellername: 'Moti Dhamala',
-      selleraddress: 'Achham, Nepal',
-      selleremail: 'dhamalamoti@gmail.com',
+      sellername: 'hemant',
+      selleraddress: 'mbm hostel',
+      selleremail: 'hemant2456@gmail.com',
       phoneNo: { mobile: '9868383125' },
     },
     expiresOn: 2077 - 9 - 19,
   },
   {
-    name: 'Dining Table',
+    name: 'monitor',
     images: [
-      { image1: '/images/table.jpg' },
-      { image1: '/images/table1.jpg' },
-      { image1: '/images/table2.jpeg' },
+      { image1: '/images/monitor1.jpg' },
+      { image1: '/images/monitor2.jpg' },
+      { image1: '/images/monitor3.jpg' },
     ],
 
     description:
-      'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
+      'a 20 inch LG monitor mainly used for coding and movie streaming purpose used for almost 2 years still in warrenty with bill',
 
     category: 'Electronics',
     Cost: {
-      price: 1500,
-    },
-    expiresOn: 2077 - 9 - 19,
-    shippingAddress: {
-      address: 'Bikasnagar',
-      city: 'nepalgunj',
-      shippingCharge: 100,
-    },
-    seller: {
-      sellername: 'Moti Dhamala',
-      selleraddress: 'Achham, Nepal',
-      selleremail: 'dhamalamoti@gmail.com',
-      phoneNo: { mobile: '9868383125' },
-    },
-  },
-  {
-    name: 'Old TV',
-    images: [
-      { image1: '/images/tv.jpg' },
-      { image1: '/images/tv1.jpg' },
-      { image1: '/images/tv2.jpg' },
-    ],
-
-    description:
-      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
-
-    category: 'Electronics',
-    Cost: {
-      price: 2100,
+      price: 900,
     },
     shippingAddress: {
       address: 'Bikasnagar',
@@ -163,9 +107,9 @@ const products = [
       shippingCharge: 100,
     },
     seller: {
-      sellername: 'Moti Dhamala',
-      selleraddress: 'Achham, Nepal',
-      selleremail: 'dhamalamoti@gmail.com',
+      sellername: 'Moti ',
+      selleraddress: 'localite',
+      selleremail: 'moti@gmail.com',
       phoneNo: { mobile: '9868383125' },
     },
     expiresOn: 2077 - 9 - 19,

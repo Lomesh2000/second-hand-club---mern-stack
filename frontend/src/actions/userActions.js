@@ -104,10 +104,6 @@ export const verify = (name, email, password, phone_no, address) => async (
       { name, email, password, contact: { phone_no }, address },
       config
     )
-    dispatch({
-      type: USER_VERIFICATION_LINK_SUCCESS,
-      payload: data,
-    })
   } catch (error) {
     dispatch({
       type: USER_VERIFICATION_LINK_FAIL,
@@ -181,15 +177,8 @@ export const sendEmail = (
       },
     }
 
-    const { data } = await axios.post(
-      '/api/users/email',
-      { receiver, text, name, address, productName, email, phone_no },
-      config
-    )
-    console.log(data)
     dispatch({
       type: EMAIL_SEND_SUCCESS,
-      payload: data,
     })
   } catch (error) {
     dispatch({

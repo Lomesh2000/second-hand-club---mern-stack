@@ -1,5 +1,0 @@
-MONGO_URI=mongodb+srv://tanmaymathur:tanmay4597@cluster0.wo71jco.mongodb.net/?retryWrites=true&w=majority
-SEND_GRID_API=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
-JWT_SECRET=hello123world
-USER1=welesi3567@dogemn.com 
-EMAIL_URL=http://localhost:3000/
